@@ -130,8 +130,11 @@
             </a>
         </div>
         <div class="footer">
-            <p>&copy; 2026 Ractai. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Ractai. All rights reserved.</p>
         </div>
     </div>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
