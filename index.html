@@ -415,7 +415,7 @@
             <nav>
                 <a href="#hero"><span class="lang-en">Download</span><span class="lang-zh">下载</span></a>
                 <a href="#features"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a>
-                <button class="lang-toggle" onclick="toggleLanguage()">
+                <button class="lang-toggle" id="langToggle">
                     <span class="lang-en">中文</span>
                     <span class="lang-zh">English</span>
                 </button>
@@ -572,13 +572,19 @@
             localStorage.setItem('language', isChinese ? 'zh' : 'en');
         }
 
-        // Load saved language preference
-        window.addEventListener('DOMContentLoaded', () => {
+        // Load saved language preference and attach event listener
+        (function() {
             const savedLang = localStorage.getItem('language');
             if (savedLang === 'zh') {
                 document.body.classList.add('chinese');
             }
-        });
+            
+            // Attach event listener to language toggle button
+            const langToggle = document.getElementById('langToggle');
+            if (langToggle) {
+                langToggle.addEventListener('click', toggleLanguage);
+            }
+        })();
     </script>
 </body>
 </html>
