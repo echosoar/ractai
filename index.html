@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ractai - AI-automated interaction app">
-    <title>Ractai - AI-Automated Interaction App</title>
+    <meta name="description" content="Ractai - Intelligent AI Chat Assistant with Memory & Automation">
+    <title>Ractai - AI Chat Assistant with Smart Memory</title>
     <style>
         * {
             margin: 0;
@@ -12,129 +12,585 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: #ffffff;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            padding: 20px 0;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
+            gap: 8px;
         }
 
-        .container {
-            max-width: 800px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 60px 40px;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            text-align: center;
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
         }
 
-        h1 {
-            font-size: 3rem;
+        nav a {
+            color: #4a4a4a;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 1rem;
+        }
+
+        nav a:hover {
+            color: #1a1a1a;
+        }
+
+        .lang-toggle {
+            padding: 8px 16px;
+            background: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .lang-toggle:hover {
+            background: #e8e8e8;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 140px 40px 80px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
             margin-bottom: 20px;
-            color: #667eea;
-            font-weight: 700;
+            line-height: 1.2;
         }
 
-        .tagline {
-            font-size: 1.5rem;
+        .hero-content p {
+            font-size: 1.2rem;
             color: #666;
-            margin-bottom: 40px;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            color: #555;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             line-height: 1.8;
         }
 
-        .links {
+        .hero-badges {
             display: flex;
-            gap: 20px;
-            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 8px 16px;
+            background: #f5f5f5;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .badge.free {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
             flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
+            padding: 15px 35px;
+            font-size: 1rem;
             font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            border: 2px solid transparent;
         }
 
-        .btn:hover {
-            background: #764ba2;
+        .btn-primary {
+            background: #1a1a1a;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #333;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(118, 75, 162, 0.4);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
 
         .btn-secondary {
-            background: #ffffff;
-            color: #667eea;
-            border: 2px solid #667eea;
-            box-shadow: none;
+            background: transparent;
+            color: #1a1a1a;
+            border: 2px solid #e0e0e0;
         }
 
         .btn-secondary:hover {
-            background: #667eea;
-            color: white;
+            border-color: #1a1a1a;
+            background: #f5f5f5;
         }
 
-        .footer {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 1px solid #e0e0e0;
-            color: #999;
-            font-size: 0.9rem;
+        .hero-visual {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        @media (max-width: 768px) {
-            h1 {
+        .hero-visual img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .animated-graphic {
+            width: 100%;
+            max-width: 500px;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+
+        .graphic-element {
+            position: absolute;
+            background: #1a1a1a;
+            border-radius: 8px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .graphic-element:nth-child(1) {
+            width: 60%;
+            height: 20px;
+            top: 20%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .graphic-element:nth-child(2) {
+            width: 40%;
+            height: 20px;
+            top: 35%;
+            left: 30%;
+            animation-delay: 0.5s;
+            opacity: 0.7;
+        }
+
+        .graphic-element:nth-child(3) {
+            width: 50%;
+            height: 20px;
+            top: 50%;
+            left: 25%;
+            animation-delay: 1s;
+            opacity: 0.5;
+        }
+
+        .graphic-element:nth-child(4) {
+            width: 30px;
+            height: 30px;
+            bottom: 30%;
+            right: 20%;
+            border-radius: 50%;
+            animation-delay: 1.5s;
+            opacity: 0.8;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 40px;
+            background: #fafafa;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 60px;
+        }
+
+        .feature-item {
+            max-width: 1200px;
+            margin: 0 auto 80px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .feature-item:nth-child(odd) .feature-content {
+            order: 2;
+        }
+
+        .feature-item:nth-child(odd) .feature-visual {
+            order: 1;
+        }
+
+        .feature-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+
+        .feature-content p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .feature-visual {
+            width: 100%;
+            min-height: 300px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            
+        }
+
+        .feature-visual img {
+            max-width: 550px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #ffffff;
+            padding: 40px;
+            text-align: left;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .header-container {
+                padding: 0 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 120px 20px 60px;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-visual {
+                min-height: 300px;
+            }
+
+            .feature-item {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-bottom: 120px;
+                padding: 0 20px;
+            }
+
+            .feature-item:nth-child(odd) .feature-content {
+                order: 1;
+            }
+
+            .feature-item:nth-child(odd) .feature-visual {
+                order: 2;
+            }
+
+            .section-title {
                 font-size: 2rem;
             }
 
-            .tagline {
-                font-size: 1.2rem;
+            .feature-content h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .logo {
+                font-size: 1.4rem;
             }
 
-            .container {
-                padding: 40px 30px;
+            nav {
+                gap: 10px;
             }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .lang-toggle {
+                padding: 6px 12px;
+                font-size: 0.85rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Language specific content */
+        .lang-zh {
+            display: none;
+        }
+
+        body.chinese .lang-en {
+            display: none;
+        }
+
+        body.chinese .lang-zh {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>🤖 Ractai</h1>
-        <p class="tagline">AI-Automated Interaction App</p>
-        <p class="description">
-            Welcome to Ractai! We're building the future of AI-powered interactions. 
-            Our platform enables seamless, intelligent automation for your applications.
-        </p>
-        <div class="links">
-            <a href="https://github.com/echosoar/ractai" class="btn" target="_blank" rel="noopener noreferrer">
-                View on GitHub
-            </a>
-            <a href="https://github.com/echosoar/ractai#readme" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                Documentation
-            </a>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="#hero" class="logo">Ract</a>
+            <nav>
+                <a href="#hero"><span class="lang-en">Download</span><span class="lang-zh">下载</span></a>
+                <a href="#features"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a>
+                <button class="lang-toggle" id="langToggle">
+                    <span class="lang-en">中文</span>
+                    <span class="lang-zh">English</span>
+                </button>
+            </nav>
         </div>
-        <div class="footer">
-            <p>&copy; <span id="year"></span> Ractai. All rights reserved.</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="lang-en">Intelligent AI Assistant with Memory</span>
+                <span class="lang-zh">AI 驱动的自动化助手</span>
+            </h1>
+            <p>
+                <span class="lang-en">Multi-model AI chat with smart memory, automation tools, and seamless integration. Your personal AI workspace that remembers and evolves.</span>
+                <span class="lang-zh">免费提供对话、记忆管理、自动化动作和多种内置工具，并可以安全连接你在各种网站的私有信息。</span>
+            </p>
+            <div class="hero-buttons">
+                <a href="https://github.com/echosoar/ractai/releases" class="btn btn-primary" target="_blank">
+                    <span class="lang-en">Download Now</span>
+                    <span class="lang-zh">下载使用 Mac 版本</span>
+                </a>
+            </div>
         </div>
-    </div>
+        <div class="hero-visual">
+            <img src="./static/main.png" />
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title">
+            <span class="lang-en">Powerful Features</span>
+            <span class="lang-zh">强大功能</span>
+        </h2>
+        <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en">Smart Memory System</span>
+                    <span class="lang-zh">智能记忆系统</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Global memory and memory bank functionality. Automatically selects and retrieves relevant memories during conversations, making your AI assistant truly context-aware and personalized.</span>
+                    <span class="lang-zh">全局记忆和记忆库功能。在对话过程中自动选择和检索相关记忆，让你的 AI 助手真正具备上下文感知和个性化能力。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/memory.png" />
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en">Action Automation</span>
+                    <span class="lang-zh">动作自动化</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Save chat sequences as reusable actions. Add triggers like schedules for fully automated execution. Transform conversations into powerful workflows.</span>
+                    <span class="lang-zh">将聊天过程保存为可重复执行的动作。添加定时等触发器实现全自动执行。将对话转化为强大的工作流。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/act.png" />
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en">Built-in Tools</span>
+                    <span class="lang-zh">内置工具集</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Extensive toolkit including web search, webpage reading, system notifications, file operations, and file retrieval. Everything you need for productivity, built right in.</span>
+                    <span class="lang-zh">丰富的工具集，包括网络搜索、网页内容读取、系统通知提示、文件读写、文件检索等。提高生产力所需的一切，全部内置。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/tools.png" />
+            </div>
+        </div>
+
+        <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en">Website Integration</span>
+                    <span class="lang-zh">网站连接</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Connect to multiple websites while maintaining logged-in sessions. Let search and content reading tools access authenticated resources seamlessly.</span>
+                    <span class="lang-zh">连接到多个网站并保持登录状态。让搜索和内容读取工具无缝访问需要身份验证的资源。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/conn.png" />
+            </div>
+        </div>
+
+
+
+        <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en">Multi-Model Support</span>
+                    <span class="lang-zh">多模型支持</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Connect with multiple AI model providers. Add and switch between different models seamlessly for multi-turn conversations. Get the best response from the right model for each task.</span>
+                    <span class="lang-zh">支持连接多种 AI 模型提供商。无缝添加和切换不同模型进行多轮对话。为每个任务选择最合适的模型，获得最佳响应。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/model.png" />
+            </div>
+        </div>
+
+
+        <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en">Usage Analytics</span>
+                    <span class="lang-zh">统计分析</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Comprehensive statistics by day, week, month, and year. Track model usage, conversation rounds, and tool invocations. Understand your AI interaction patterns.</span>
+                    <span class="lang-zh">按日、周、月、年维度查看全面统计。跟踪模型消耗量、聊天轮数和工具调用量。深入了解你的 AI 交互模式。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/stat.png" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Ract. <span class="lang-en">All rights reserved.</span><span class="lang-zh">版权所有</span></p>
+    </footer>
+
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
+
+        function toggleLanguage() {
+            document.body.classList.toggle('chinese');
+            // Save preference
+            const isChinese = document.body.classList.contains('chinese');
+            localStorage.setItem('language', isChinese ? 'zh' : 'en');
+        }
+
+        // Load saved language preference and attach event listener
+        (function() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang === 'zh') {
+                document.body.classList.add('chinese');
+            }
+            
+            // Attach event listener to language toggle button
+            const langToggle = document.getElementById('langToggle');
+            if (langToggle) {
+                langToggle.addEventListener('click', toggleLanguage);
+            }
+        })();
     </script>
 </body>
 </html>
