@@ -106,6 +106,12 @@
             line-height: 1.2;
         }
 
+        .hero-content  .more-desc {
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+        }
+
         .hero-content p {
             font-size: 1.2rem;
             color: #666;
@@ -152,12 +158,12 @@
         }
 
         .btn-primary {
-            background: #1a1a1a;
+            background: #037aff;
             color: #ffffff;
         }
 
         .btn-primary:hover {
-            background: #333;
+            background: #147ffa;
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
         }
@@ -352,6 +358,7 @@
             .hero-visual {
                 min-height: 300px;
             }
+            
             .feature-visual {
                 max-width: 100%;
                 height: auto;
@@ -455,17 +462,18 @@
             </h1>
             <p>
                 <span class="lang-en">Multi-model AI chat with smart memory, automation tools, and seamless integration. Your personal AI workspace that remembers and evolves.</span>
-                <span class="lang-zh">免费提供对话、记忆管理、自动化动作和多种内置工具，并可以安全连接你在各种网站的私有信息。</span>
+                <span class="lang-zh">多模态对话、智能记忆、自动化动作和多种内置工具，并能安全连接你在各种网站的私有信息。</span>
             </p>
             <div class="hero-buttons">
                 <a href="https://github.com/echosoar/ractai/releases" class="btn btn-primary" target="_blank">
                     <span class="lang-en">Download Now</span>
-                    <span class="lang-zh">下载使用 Mac 版本</span>
+                    <span class="lang-zh">免费下载使用 (For MacOS)</span>
                 </a>
             </div>
+            <div class="more-desc">使用 SwiftUI 开发，带来极速交互响应、极小的内存占用和 1M 大小的包体积</div>
         </div>
         <div class="hero-visual">
-            <img src="./static/main.png" />
+            <img class="main-img" src="./static/main.jpg" />
         </div>
     </section>
 
@@ -473,17 +481,35 @@
     <section class="features" id="features">
         <h2 class="section-title">
             <span class="lang-en">Powerful Features</span>
-            <span class="lang-zh">功能特性</span>
+            <span class="lang-zh">多种独创、好用的高级特性</span>
         </h2>
+
+            
+
+         <div class="feature-item">
+            <div class="feature-content">
+                <h3>
+                    <span class="lang-en"></span>
+                    <span class="lang-zh">多模型、多模态</span>
+                </h3>
+                <p>
+                    <span class="lang-en">Global memory and memory bank functionality. Automatically selects and retrieves relevant memories during conversations, making your AI assistant truly context-aware and personalized.</span>
+                    <span class="lang-zh">在一次对话中任意切换不同的模型，提供文字、图像、文件等类型的多模态输入能力。</span>
+                </p>
+            </div>
+            <div class="feature-visual">
+                <img src="./static/main.jpg" />
+            </div>
+        </div>
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
                     <span class="lang-en">Smart Memory System</span>
-                    <span class="lang-zh">智能记忆系统</span>
+                    <span class="lang-zh">记忆系统</span>
                 </h3>
                 <p>
                     <span class="lang-en">Global memory and memory bank functionality. Automatically selects and retrieves relevant memories during conversations, making your AI assistant truly context-aware and personalized.</span>
-                    <span class="lang-zh">全局记忆和记忆库功能。在对话过程中自动选择和检索相关记忆，让你的 AI 助手真正具备上下文感知和个性化能力。</span>
+                    <span class="lang-zh">在对话过程中 Ract 会自动选择和检索全局记忆和记忆库，为你的问题关联最匹配的记忆，让 AI 成为懂你的私人助手。</span>
                 </p>
             </div>
             <div class="feature-visual">
