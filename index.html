@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ractai - Intelligent AI Chat Assistant with Memory & Automation">
+    <meta name="description" content="Ract - AI-automated interaction app">
     <title>Ractai - AI Chat Assistant with Smart Memory</title>
+    <link rel="icon" type="image/png" href="./static/icon.png" />
     <style>
         * {
             margin: 0;
@@ -45,8 +46,8 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
+            font-size: 20px;
+            font-weight: 500;
             color: #1a1a1a;
             text-decoration: none;
             display: flex;
@@ -291,9 +292,9 @@
         }
 
         .feature-content p {
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.8;
+            font-size: 16px;
+            color: #2a4458;
+            line-height: 24px;
         }
 
         .feature-visual {
@@ -318,7 +319,7 @@
             background: #1a1a1a;
             color: #ffffff;
             padding: 40px;
-            text-align: left;
+            text-align: center;
         }
 
         footer p {
@@ -441,9 +442,9 @@
     <!-- Header -->
     <header>
         <div class="header-container">
-            <a href="#hero" class="logo">Ract</a>
+            <a href="#ract" class="logo"><img height="48px" src="./static/icon.png" />Ract</a>
             <nav>
-                <a href="#hero"><span class="lang-en">Download</span><span class="lang-zh">下载</span></a>
+                <a href="#ract"><span class="lang-en">Download</span><span class="lang-zh">下载</span></a>
                 <a href="#features"><span class="lang-en">Features</span><span class="lang-zh">功能</span></a>
                 <button class="lang-toggle" id="langToggle">
                     <span class="lang-en">中文</span>
@@ -454,7 +455,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section class="hero" id="ract">
         <div class="hero-content">
             <h1>
                 <span class="lang-en">Intelligent AI Assistant with Memory</span>
@@ -480,8 +481,6 @@
     <!-- Features Section -->
     <section class="features" id="features">
         <h2 class="section-title">
-            <span class="lang-en">Powerful Features</span>
-            <span class="lang-zh">多种独创、好用的高级特性</span>
         </h2>
 
             
@@ -498,7 +497,7 @@
                 </p>
             </div>
             <div class="feature-visual">
-                <img src="./static/main.jpg" />
+                <img src="./static/multi.png" />
             </div>
         </div>
         <div class="feature-item">
@@ -557,7 +556,10 @@
                 </h3>
                 <p>
                     <span class="lang-en">Connect to multiple websites while maintaining logged-in sessions. Let search and content reading tools access authenticated resources seamlessly.</span>
-                    <span class="lang-zh">连接到多个网站并保持登录状态。让搜索和内容读取工具无缝访问需要身份验证的资源。</span>
+                    <span class="lang-zh">
+                        连接到多个网站并保持登录状态。以已登录的身份帮你浏览页页面、总结社交媒体动态。<br />
+                        在本地保存你的登录信息，确保隐私和安全。
+                    </span>
                 </p>
             </div>
             <div class="feature-visual">
@@ -596,14 +598,14 @@
                 </p>
             </div>
             <div class="feature-visual">
-                <img src="./static/stat.png" />
+                <img src="./static/stats.png" />
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Ract. <span class="lang-en">All rights reserved.</span><span class="lang-zh">由<a href="https://github.com/echosoar" style="color:#cc0">echosoar</a> 用爱发电</span></p>
+        <p>&copy; <span id="year"></span> Ract. <span class="lang-en">All rights reserved.</span><span class="lang-zh">由 <a href="https://github.com/echosoar" style="color:#cc0">echosoar</a> 用爱发电</span></p>
     </footer>
 
     <script>
