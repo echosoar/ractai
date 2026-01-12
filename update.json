@@ -1,1 +1,15 @@
-{"version":"0.2.8","releaseDate":"2026/01/11","downloads":{"arm64":{"url":""},"x64":{"url":""}},"releaseNotes":"test release"}
+{
+  "version": "0.2.10",
+  "releaseDate": "2026-01-12T03:48:03Z",
+  "downloads": {
+    "arm64": {
+      "url": "https://ractai.com/dist/ract-latest-arm.dmg",
+      "filename": "ract-latest-arm.dmg"
+    },
+    "x64": {
+      "url": "https://ractai.com/dist/ract-latest-intel.dmg",
+      "filename": "ract-latest-intel.dmg"
+    }
+  },
+  "releaseNotes": "RACT v0.2.10 released. Visit https://github.com/echosoar/ractai/releases/tag/v0.2.10 for details."
+}
