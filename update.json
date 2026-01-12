@@ -1,6 +1,6 @@
 {
-  "version": "0.2.11",
-  "releaseDate": "2026-01-12T08:43:43Z",
+  "version": "0.2.12",
+  "releaseDate": "2026-01-12T15:16:21Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,7 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release Merge pull request #55 from echosoar/copilot/optimize-tool-calling-response
-
-优化工具调用"
+  "releaseNotes": "修复了一些已知问题，提升了应用的稳定性和性能。"
 }
