@@ -499,7 +499,7 @@
                 </a>
             </div>
             <div class="download-info">
-                <a id="intelDownloadLink" style="display: none;" target="_blank">
+                <a id="intelDownloadLink" href="#" style="display: none;" aria-disabled="true" target="_blank">
                     <span class="lang-en">Download Intel version</span>
                     <span class="lang-zh">下载 Intel 版本</span>
                 </a>
@@ -706,6 +706,7 @@
                     const intelDownloadLink = document.getElementById('intelDownloadLink');
                     if (intelDownloadLink && data.downloads && data.downloads.x64) {
                         intelDownloadLink.href = data.downloads.x64.url;
+                        intelDownloadLink.removeAttribute('aria-disabled');
                         intelDownloadLink.style.display = 'inline';
                     }
 
