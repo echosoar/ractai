@@ -145,6 +145,29 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .download-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .download-info a {
+            color: #037aff;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+
+        .download-info a:hover {
+            text-decoration: underline;
+        }
+
+        .version-info {
+            color: #999;
+            font-size: 0.85rem;
+            margin-left: 15px;
         }
 
         .btn {
@@ -170,13 +193,13 @@
         }
 
         .btn-secondary {
-            background: transparent;
+            background: #ffffff;
             color: #1a1a1a;
             border: 2px solid #e0e0e0;
         }
 
         .btn-secondary:hover {
-            border-color: #1a1a1a;
+            border-color: #999;
             background: #f5f5f5;
         }
 
@@ -436,6 +459,9 @@
         body.chinese .lang-zh {
             display: block;
         }
+        body.chinese span.lang-zh {
+            display:inline-block;
+        }
     </style>
 </head>
 <body class="chinese">
@@ -466,10 +492,21 @@
                 <span class="lang-zh">多模态对话、智能记忆、自动化动作、多种内置工具和 MCP，并能安全连接你在各种网站的私有信息。</span>
             </p>
             <div class="hero-buttons">
-                <a href="https://github.com/echosoar/ractai/releases" class="btn btn-primary" target="_blank">
-                    <span class="lang-en">Free Download (for macOS)</span>
-                    <span class="lang-zh">免费下载使用 (For MacOS)</span>
+                <a href="https://github.com/echosoar/ractai/releases" class="btn btn-primary" id="mainDownloadBtn" target="_blank">
+                    <span class="lang-en">Free Download ( Mac Arm )</span>
+                    <span class="lang-zh">免费下载使用 ( Mac Arm 版 )</span>
                 </a>
+                <a href="https://github.com/echosoar/ractai/issues" class="btn btn-secondary" target="_blank">
+                    <span class="lang-en">Issue Feedback</span>
+                    <span class="lang-zh">问题反馈</span>
+                </a>
+            </div>
+            <div class="download-info">
+                <a id="intelDownloadLink" href="#" style="display: none;" aria-disabled="true" target="_blank">
+                    <span class="lang-en">Download Intel version</span>
+                    <span class="lang-zh">下载 Intel 版本</span>
+                </a>
+                <span class="version-info" id="versionInfo" style="display: none;"></span>
             </div>
             <div class="more-desc">使用 Swift 开发，带来极速交互响应、极小内存占用和 2M 大小包体积</div>
         </div>
@@ -651,6 +688,47 @@
                 langToggle.addEventListener('click', toggleLanguage);
             }
         })();
+
+        // Load update.json after page loads
+        window.addEventListener('load', function() {
+            fetch('./update.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Failed to fetch update.json');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Update main download button to ARM version
+                    const mainDownloadBtn = document.getElementById('mainDownloadBtn');
+                    if (mainDownloadBtn && data.downloads && data.downloads.arm64) {
+                        mainDownloadBtn.href = data.downloads.arm64.url;
+                    }
+
+                    // Show Intel download link
+                    const intelDownloadLink = document.getElementById('intelDownloadLink');
+                    if (intelDownloadLink && data.downloads && data.downloads.x64) {
+                        intelDownloadLink.href = data.downloads.x64.url;
+                        intelDownloadLink.removeAttribute('aria-disabled');
+                        intelDownloadLink.style.display = 'inline';
+                    }
+
+                    // Show version and date info
+                    const versionInfo = document.getElementById('versionInfo');
+                    if (versionInfo && data.version && data.releaseDate) {
+                        const date = new Date(data.releaseDate);
+                        // Validate date is valid before formatting
+                        if (!isNaN(date.getTime())) {
+                            const formattedDate = date.toISOString().split('T')[0];
+                            versionInfo.textContent = `v${data.version} (${formattedDate})`;
+                            versionInfo.style.display = 'inline';
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Failed to load update.json:', error);
+                });
+        });
     </script>
 </body>
 </html>
