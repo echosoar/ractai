@@ -499,7 +499,7 @@
                 </a>
             </div>
             <div class="download-info">
-                <a href="#" id="intelDownloadLink" style="display: none;" target="_blank">
+                <a id="intelDownloadLink" style="display: none;" target="_blank">
                     <span class="lang-en">Download Intel version</span>
                     <span class="lang-zh">下载 Intel 版本</span>
                 </a>
@@ -713,9 +713,12 @@
                     const versionInfo = document.getElementById('versionInfo');
                     if (versionInfo && data.version && data.releaseDate) {
                         const date = new Date(data.releaseDate);
-                        const formattedDate = date.toISOString().split('T')[0];
-                        versionInfo.textContent = `v${data.version} (${formattedDate})`;
-                        versionInfo.style.display = 'inline';
+                        // Validate date is valid before formatting
+                        if (!isNaN(date.getTime())) {
+                            const formattedDate = date.toISOString().split('T')[0];
+                            versionInfo.textContent = `v${data.version} (${formattedDate})`;
+                            versionInfo.style.display = 'inline';
+                        }
                     }
                 })
                 .catch(error => {
