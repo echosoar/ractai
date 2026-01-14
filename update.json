@@ -1,6 +1,6 @@
 {
-  "version": "0.2.14",
-  "releaseDate": "2026-01-13T09:26:25Z",
+  "version": "0.2.15",
+  "releaseDate": "2026-01-14T00:59:09Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "修复了一些已知问题，提升了应用的稳定性和性能。"
+  "releaseNotes": "release new vesion 优化markdown内容渲染，新增简洁模式，并优化界面展示 "
 }
