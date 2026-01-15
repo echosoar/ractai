@@ -1,6 +1,6 @@
 {
-  "version": "0.2.15",
-  "releaseDate": "2026-01-14T00:59:09Z",
+  "version": "0.2.16",
+  "releaseDate": "2026-01-15T01:02:12Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release new vesion 优化markdown内容渲染，新增简洁模式，并优化界面展示 "
+  "releaseNotes": "release 支持ai响应图像，并优化图像预览功能和其他工具能力 "
 }
