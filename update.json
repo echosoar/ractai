@@ -1,6 +1,6 @@
 {
-  "version": "0.2.16",
-  "releaseDate": "2026-01-15T01:02:12Z",
+  "version": "0.2.17",
+  "releaseDate": "2026-01-17T12:04:16Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release 支持ai响应图像，并优化图像预览功能和其他工具能力 "
+  "releaseNotes": "release 新增任务管理工具，优化网络搜索能力，优化简洁模式 "
 }
