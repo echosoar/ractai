@@ -93,9 +93,7 @@
             padding: 140px 40px 80px;
             max-width: 1200px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            display: block;
             align-items: center;
         }
 
@@ -105,12 +103,14 @@
             color: #1a1a1a;
             margin-bottom: 20px;
             line-height: 1.2;
+            text-align: center;
         }
 
         .hero-content  .more-desc {
             font-size: 12px;
             color: #999;
             margin-top: 30px;
+            text-align: center;
         }
 
         .hero-content p {
@@ -118,15 +118,8 @@
             color: #666;
             margin-bottom: 30px;
             line-height: 1.8;
+            text-align: center;
         }
-
-        .hero-badges {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-
         .badge {
             padding: 8px 16px;
             background: #f5f5f5;
@@ -146,12 +139,14 @@
             gap: 15px;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: center;
         }
 
         .download-info {
             margin-top: 15px;
             font-size: 0.9rem;
             color: #666;
+            text-align: center;
         }
 
         .download-info a {
@@ -279,7 +274,6 @@
         /* Features Section */
         .features {
             padding: 80px 40px;
-            background: #fafafa;
         }
 
         .section-title {
@@ -293,10 +287,16 @@
         .feature-item {
             max-width: 1200px;
             margin: 0 auto 80px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            display: block;
+            
             align-items: center;
+            padding: 80px 20px;
+            border-radius: 20px;
+        }
+
+        .feature-item:nth-child(2n +1) {
+            color: #fff;
+            background-color: #000413;
         }
 
         .feature-item:nth-child(odd) .feature-content {
@@ -310,14 +310,16 @@
         .feature-content h3 {
             font-size: 2rem;
             font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 20px;
+            margin-bottom: 2cqi;
+            text-align: center;
         }
 
         .feature-content p {
             font-size: 16px;
-            color: #2a4458;
             line-height: 24px;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            text-align: center;
         }
 
         .feature-visual {
@@ -332,14 +334,13 @@
         }
 
         .feature-visual img {
-            max-width: 550px;
+            max-width: 80%;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
         footer {
-            background: #1a1a1a;
+            background: #000413;
             color: #ffffff;
             padding: 40px;
             text-align: center;
@@ -350,70 +351,6 @@
             opacity: 0.9;
         }
 
-        /* Responsive */
-        @media (max-width: 968px) {
-            .header-container {
-                padding: 0 20px;
-            }
-
-            nav {
-                gap: 15px;
-            }
-
-            nav a {
-                font-size: 0.9rem;
-            }
-
-            .features {
-                padding: 40px 20px;
-                background: #fafafa;
-            }
-
-            .hero {
-                grid-template-columns: 1fr;
-                padding: 120px 20px 60px;
-                gap: 40px;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-visual {
-                min-height: 300px;
-            }
-            
-            .feature-visual {
-                max-width: 100%;
-                height: auto;
-                min-height: auto;
-            }
-            .feature-visual img {
-                max-width: 100%;
-            }
-            .feature-item {
-                grid-template-columns: 1fr;
-                gap: 30px;
-                margin-bottom: 120px;
-                padding: 0 20px;
-            }
-
-            .feature-item:nth-child(odd) .feature-content {
-                order: 1;
-            }
-
-            .feature-item:nth-child(odd) .feature-visual {
-                order: 2;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .feature-content h3 {
-                font-size: 1.6rem;
-            }
-        }
 
         @media (max-width: 640px) {
             .logo {
@@ -427,6 +364,15 @@
             nav a {
                 font-size: 0.85rem;
             }
+            .hero {
+                padding-bottom: 20px;
+            }
+            .header-container {
+                padding: 0 20px;
+            }
+            .hero-visual {
+                min-height: auto;
+            }
 
             .lang-toggle {
                 padding: 6px 12px;
@@ -434,11 +380,37 @@
             }
 
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 28px;
             }
 
             .hero-content p {
-                font-size: 1rem;
+                font-size: 16px;
+            }
+            .features {
+                padding: 12px;
+            }
+            .feature-item {
+                padding: 40px 10px;
+            }
+
+            .feature-item h3 {
+                font-size: 24px;
+            }
+
+            .feature-item p {
+                font-size: 14px;
+            }
+
+            .feature-visual {
+                min-height: 200px;
+            }
+
+            .feature-visual img {
+                max-width: 100%;
+            }
+
+            .btn-secondary {
+                display: none;
             }
 
             .btn {
@@ -489,7 +461,7 @@
             </h1>
             <p>
                 <span class="lang-en">Multimodal conversations, intelligent memory, automated actions, and a suite of built-in tools — with secure access to your private information across websites.</span>
-                <span class="lang-zh">多模态对话、智能记忆、自动化动作、多种内置工具和 MCP，并能安全连接你在各种网站的私有信息。</span>
+                <span class="lang-zh">多模态对话、自动化动作、智能记忆、多种内置工具、MCP 和 Skills，并能安全连接各种网站。</span>
             </p>
             <div class="hero-buttons">
                 <a href="https://github.com/echosoar/ractai/releases" class="btn btn-primary" id="mainDownloadBtn" target="_blank">
@@ -508,7 +480,7 @@
                 </a>
                 <span class="version-info" id="versionInfo" style="display: none;"></span>
             </div>
-            <div class="more-desc">使用 Swift 开发，带来极速交互响应、极小内存占用和 2M 大小包体积</div>
+            <div class="more-desc">使用 Swift 开发，极小内存占用和极小包体积（2 MB）</div>
         </div>
         <div class="hero-visual">
             <img class="main-img" src="./static/header.png" />
@@ -517,9 +489,6 @@
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <h2 class="section-title">
-        </h2>
-
             
 
          <div class="feature-item">
