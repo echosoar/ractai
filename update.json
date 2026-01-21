@@ -1,6 +1,6 @@
 {
-  "version": "0.2.17",
-  "releaseDate": "2026-01-17T12:04:16Z",
+  "version": "0.2.18",
+  "releaseDate": "2026-01-21T05:04:53Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release 新增任务管理工具，优化网络搜索能力，优化简洁模式 "
+  "releaseNotes": "release 优化mcp连接；新增模型提供商一键授权；网络搜索支持过滤；html代码块支持预览；优化消息切换响应；优化markdown渲染；优化简洁模式 "
 }
