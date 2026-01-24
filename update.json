@@ -1,6 +1,6 @@
 {
-  "version": "0.2.19",
-  "releaseDate": "2026-01-22T06:49:31Z",
+  "version": "0.2.20",
+  "releaseDate": "2026-01-24T01:31:56Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release 优化内置工具，新增命令执行工具；优化模型提供商一键授权；新增skills下载功能；优化工具用户授权确认；界面优化 "
+  "releaseNotes": "release 新增调用深度配置；新增会话目录状态和Token消耗量信息；优化工具调用；优化 MCP 逻辑；优化 Markdown 解析；设置面板新增内置工具系统提示词展示 "
 }
