@@ -1,6 +1,6 @@
 {
-  "version": "0.2.21",
-  "releaseDate": "2026-01-25T04:06:10Z",
+  "version": "0.2.22",
+  "releaseDate": "2026-01-26T00:10:34Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release 优化思考模式；优化工具调用和信息条；优化任务管理工具；优化表格渲染 "
+  "releaseNotes": "release 优化 actions、tool 执行，支持用户编辑，优化 debug 模式 "
 }
