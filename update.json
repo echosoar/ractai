@@ -1,6 +1,6 @@
 {
-  "version": "0.2.22",
-  "releaseDate": "2026-01-26T00:10:34Z",
+  "version": "0.2.23",
+  "releaseDate": "2026-01-27T04:01:13Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release 优化 actions、tool 执行，支持用户编辑，优化 debug 模式 "
+  "releaseNotes": "release 新增语音朗读功能；新增多种智能体 "
 }
