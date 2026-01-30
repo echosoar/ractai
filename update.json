@@ -1,6 +1,6 @@
 {
-  "version": "0.2.25",
-  "releaseDate": "2026-01-30T02:02:43Z",
+  "version": "0.2.26",
+  "releaseDate": "2026-01-30T13:19:59Z",
   "downloads": {
     "arm64": {
       "url": "https://ractai.com/dist/ract-latest-arm.dmg",
@@ -11,5 +11,5 @@
       "filename": "ract-latest-intel.dmg"
     }
   },
-  "releaseNotes": "release 新增在会话文件列表；增强消息搜索；acp支持；优化调用深度 "
+  "releaseNotes": "release 修复了一些问题 "
 }
