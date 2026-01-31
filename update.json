@@ -1,15 +1,19 @@
 {
-  "version": "0.2.22",
-  "releaseDate": "2026-01-26T00:10:34Z",
+  "version": "0.2.27",
+  "releaseDate": "2026-01-31T07:04:45Z",
   "downloads": {
+    "universal": {
+      "url": "https://ractai.com/dist/ract-latest.dmg",
+      "filename": "ract-latest.dmg"
+    },
     "arm64": {
-      "url": "https://ractai.com/dist/ract-latest-arm.dmg",
-      "filename": "ract-latest-arm.dmg"
+      "url": "https://ractai.com/dist/ract-latest.dmg",
+      "filename": "ract-latest.dmg"
     },
     "x64": {
-      "url": "https://ractai.com/dist/ract-latest-intel.dmg",
-      "filename": "ract-latest-intel.dmg"
+      "url": "https://ractai.com/dist/ract-latest.dmg",
+      "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化 actions、tool 执行，支持用户编辑，优化 debug 模式 "
+  "releaseNotes": "release 修复了一些已知问题 "
 }
