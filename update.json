@@ -1,6 +1,6 @@
 {
-  "version": "0.2.28",
-  "releaseDate": "2026-01-31T08:05:05Z",
+  "version": "0.2.30",
+  "releaseDate": "2026-02-02T14:49:43Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化 subagent 能力 "
+  "releaseNotes": "release 优化网络内容获取，减少token消耗；acp 优化；上下文长度优化；优化图像生成模型的输出 "
 }
