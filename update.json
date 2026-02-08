@@ -1,6 +1,6 @@
 {
-  "version": "0.2.31",
-  "releaseDate": "2026-02-04T16:12:27Z",
+  "version": "0.2.32",
+  "releaseDate": "2026-02-08T06:50:18Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化首字节延时、文件列表展示；支持模型复制，新增模型网关；优化markdown渲染、并行搜索、并行聊天等操作 "
+  "releaseNotes": "release 聊天置顶；支持 tavily、exa等三方搜索渠道；支持命令后台运行；5xx 自动重试；优化 md 渲染 "
 }
