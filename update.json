@@ -1,6 +1,6 @@
 {
-  "version": "0.2.33",
-  "releaseDate": "2026-02-08T08:54:09Z",
+  "version": "0.2.34",
+  "releaseDate": "2026-02-09T15:04:05Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增命令后台执行；新增拍照和选择目录 "
+  "releaseNotes": "release 新增对 seedance 视频生成模型支持；优化svg预览；优化模型添加自动补全；优化代码块显示 "
 }
