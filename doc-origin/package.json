@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "rspress build",
+    "build": "rspress build && rm -rf ../docs ../doc-static ../static && mv ./doc_build/docs ../docs && mv ./doc_build/doc-static ../doc-static && mv ./doc_build/static ../static",
     "dev": "rspress dev",
     "preview": "rspress preview"
   },
