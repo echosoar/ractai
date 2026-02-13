@@ -18,6 +18,8 @@ Ract 提供了丰富的内置工具，可以让您更好地与 AI 进行交互�
 
 ![](/doc-static/tools/fetch-content.png)
 
+Ract 内置的“网页内容读取”工具也支持 cloudflare 提出的 [“Markdown for Agents”](https://blog.cloudflare.com/markdown-for-agents/) 特性。可以在网站支持的情况下，让 AI 直接获取到网页的 Markdown 格式内容，从而获得更好的内容结构和更少的噪音。
+
 ## 网页截图
 
 获取指定 URL 的网页截图，可以设置截图的 `宽度`、`高度`、等参数来调整截图的效果。获取到的截图会自动保存在 `当前会话目录`，也可以在会话消息列表中点击查看。
