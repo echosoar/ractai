@@ -1,6 +1,6 @@
 {
-  "version": "0.2.36",
-  "releaseDate": "2026-02-13T15:48:08Z",
+  "version": "0.2.37",
+  "releaseDate": "2026-02-14T14:23:19Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增群聊模式；新增 Markdown For Agent 支持；支持自定义 TTS 模型；优化模型网关 "
+  "releaseNotes": "release 新年快乐；优化群聊自判断模式；优化token消耗统计 "
 }
