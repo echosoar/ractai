@@ -1,6 +1,6 @@
 {
-  "version": "0.2.37",
-  "releaseDate": "2026-02-14T14:23:19Z",
+  "version": "0.2.38",
+  "releaseDate": "2026-02-21T15:46:34Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新年快乐；优化群聊自判断模式；优化token消耗统计 "
+  "releaseNotes": "release 新增快捷短语;群聊支持 @ 群成员；优化工具执行；优化多行输入 "
 }
