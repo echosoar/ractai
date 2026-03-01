@@ -1,6 +1,6 @@
 {
-  "version": "0.2.39",
-  "releaseDate": "2026-03-01T06:48:37Z",
+  "version": "0.2.40",
+  "releaseDate": "2026-03-01T14:55:38Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增会话网关，可以像 OpenClaw 一样通过飞书等 IM 工具操作其他设备上的 Ract 完成任务；优化上下文自动压缩；优化工具后台执行和进程检测 "
+  "releaseNotes": "release 优化 claw 模式；新增 vertext 类型模型接入 "
 }
