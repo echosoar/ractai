@@ -1,6 +1,6 @@
 {
-  "version": "0.2.40",
-  "releaseDate": "2026-03-01T14:55:38Z",
+  "version": "0.2.41",
+  "releaseDate": "2026-03-03T01:19:39Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化 claw 模式；新增 vertext 类型模型接入 "
+  "releaseNotes": "release 新增 read file 工具；飞书会话网关支持接受图片文件 "
 }
