@@ -14,15 +14,24 @@
 
 ![](/doc-static/session/feishu-grunt.png)
 
-4. 发布应用
-
-5. 在飞书开放平台，点击 `基础信息` - `凭证与基础信息`，复制应用的 `App ID` 和 `App Secret`，并在 Ract 的 `设置` - `会话网关` 中进行配置。
+4. 在飞书开放平台，点击 `基础信息` - `凭证与基础信息`，复制应用的 `App ID` 和 `App Secret`，并在 Ract 的 `设置` - `会话网关` 中进行配置。
 
 ![](/doc-static/session/feishu-add.png)
 
-6. 在飞书中创建群聊，搜索添加机器人，输入机器人名称，选择刚才创建的应用，完成添加。
 
-7. @这个机器人，发送消息进行对话。
+5. 开启事件订阅
+
+![](/doc-static/session/feishu-event.png)
+
+6. 发布应用
+
+![](/doc-static/session/feishu-version.png)
+
+7. 在飞书中创建群聊，搜索添加机器人，输入机器人名称，选择刚才创建的应用，完成添加。
+
+8. @这个机器人，发送消息进行对话。
+
+9. 对这个机器人进行私聊也可以。
 
 
 ## 权限
