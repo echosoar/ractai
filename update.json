@@ -1,6 +1,6 @@
 {
-  "version": "0.2.41",
-  "releaseDate": "2026-03-03T01:19:39Z",
+  "version": "0.2.42",
+  "releaseDate": "2026-03-06T15:00:27Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增 read file 工具；飞书会话网关支持接受图片文件 "
+  "releaseNotes": "release 优化会话网关定时任务、飞书图片发送等能力；子代理可以指定模型；VertexAI 系统提示词优化；优化UI展示 "
 }
