@@ -1,6 +1,6 @@
 {
-  "version": "0.2.43",
-  "releaseDate": "2026-03-08T13:40:06Z",
+  "version": "0.2.44",
+  "releaseDate": "2026-03-14T14:10:19Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化飞书会话网关发送图片和文件能力 "
+  "releaseNotes": "release 优化内置的 browser-use "
 }
