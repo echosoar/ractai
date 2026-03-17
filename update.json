@@ -1,6 +1,6 @@
 {
-  "version": "0.2.44",
-  "releaseDate": "2026-03-14T14:10:19Z",
+  "version": "0.2.45",
+  "releaseDate": "2026-03-17T13:46:58Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化内置的 browser-use "
+  "releaseNotes": "release 新增 kreuzberg/RTK 两个插件，支持解析 79 种文件内容及降低 Bash 执行的 Token 消耗；优化样式 "
 }
