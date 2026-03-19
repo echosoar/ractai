@@ -1,0 +1,214 @@
+[
+    {
+        "groupName": "集团公司",
+        "taskLabel":"任务指示",
+        "structureLabel":"组织架构",
+        "archiveLabel":"档案管理",
+        "agents": [
+            {
+                "role": "ceo",
+                "name": "首席执行官",
+                "description": "负责公司的整体战略规划和决策，领导公司实现长期发展目标。",
+                "prompt": "",
+                "level": 1,
+                "canAssignTo": [
+                    "secretary"
+                ]
+            },
+            {
+                "role": "secretary",
+                "name": "秘书",
+                "description": "负责协助 CEO 处理日常事务，安排任务给各部门。",
+                "prompt": "",
+                "level": 2,
+                "canAssignTo": [
+                    "design",
+                    "technical",
+                    "financial",
+                    "legal",
+                    "audit",
+                    "archive"
+                ]
+            },
+            {
+                "role": "design",
+                "name": "设计部",
+                "level": 3,
+                "description": "负责公司的设计工作，包括产品设计、视觉设计和用户体验设计，确保公司产品的美观性和易用性。",
+                "prompt": "",
+                "canAssignTo": [
+                    "archive"
+                ]
+            },
+            {
+                "role": "technical",
+                "name": "技术部",
+                "level": 3,
+                "description": "负责公司的技术开发和维护工作，包括软件开发、系统架构设计和技术支持，确保公司技术的先进性和稳定性。",
+                "prompt": "",
+                "canAssignTo": [
+                    "archive"
+                ]
+            },
+            {
+                "role": "financial",
+                "name": "财务部",
+                "level": 3,
+                "description": "负责公司的财务管理工作，包括预算编制、财务分析和资金管理，确保公司财务的健康和稳定。",
+                "prompt": "",
+                "canAssignTo": [
+                    "archive"
+                ]
+            },
+            {
+                "role": "legal",
+                "name": "法务部",
+                "level": 3,
+                "description": "负责公司的法律事务管理，包括合同审查、法律咨询和风险管理，确保公司运营的合法性和合规性。",
+                "prompt": "",
+                "canAssignTo": [
+                    "archive"
+                ]
+            },
+            {
+                "role": "audit",
+                "name": "审计部",
+                "level": 3,
+                "description": "负责公司的审计工作，包括内部审计、财务审计和合规审计，确保公司运营的透明性和合规性。",
+                "prompt": "",
+                "retry": 3,
+                "canAssignTo": [
+                    "archive"
+                ]
+            },
+            {
+                "role": "archive",
+                "name": "档案室",
+                "level": 3,
+                "description": "负责公司的档案管理工作，包括文件整理、存档和保密管理，确保公司档案的完整性和安全性。",
+                "prompt": "",
+                "canAssignTo": []
+            }
+        ]
+    },
+    {
+        "groupName": "三省六部",
+        "agents": [
+            {
+                "role": "huangdi",
+                "name": "皇帝",
+                "level": 1,
+                "description": "负责国家的整体战略规划和决策，领导国家实现长期发展目标。",
+                "prompt": "",
+                "canAssignTo": [
+                    "taizi"
+                ]
+            },
+            {
+                "role": "taizi",
+                "name": "太子",
+                "level": 2,
+                "description": "负责协助皇帝处理日常事务，安排任务给各部门。",
+                "prompt": "",
+                "canAssignTo": [
+                    "zhongshu"
+                ]
+            },
+            {
+                "role": "zhongshu",
+                "name": "中书省",
+                "level": 3,
+                "description": "负责国家的政策制定和文书处理工作，确保国家政策的科学性和有效性。",
+                "prompt": "",
+                "canAssignTo": [
+                    "menxia"
+                ]
+            },
+            {
+                "role": "menxia",
+                "name": "门下省",
+                "level": 3,
+                "description": "负责国家的政策审查和文书处理工作，确保国家政策的合法性和有效性。",
+                "prompt": "",
+                "canAssignTo": [
+                    "shangshu"
+                ]
+            },
+            {
+                "role": "shangshu",
+                "name": "尚书省",
+                "level": 3,
+                "description": "负责国家的行政管理和政策执行工作，确保国家政策的有效实施。",
+                "prompt": "",
+                "canAssignTo": [
+                    "hubu",
+                    "libu",
+                    "hrbu",
+                    "bingbu",
+                    "xingbu",
+                    "gongbu"
+                ]
+            },
+            {
+                "role": "hubu",
+                "name": "户部",
+                "level": 4,
+                "description": "负责国家的财政和税务管理工作，确保国家财政的健康和稳定。",
+                "prompt": "",
+                "canAssignTo": [
+                    
+                ]
+            },
+            {
+                "role": "libu",
+                "name": "礼部",
+                "level": 4,
+                "description": "负责国家的礼仪、教育和文化管理工作，确保国家的礼仪规范和文化传承。",
+                "prompt": "",
+                "canAssignTo": [
+                
+                ]
+            },
+            {
+                "role": "hrbu",
+                "name": "吏部",
+                "level": 4,
+                "description": "负责国家的官员管理和人事安排工作，确保国家官员的素质和能力。",
+                "prompt": "",
+                "canAssignTo": [
+                    
+                ]
+            },
+            {
+                "role": "bingbu",
+                "name": "兵部",
+                "level": 4,
+                "description": "负责国家的军事管理和国防建设工作，确保国家的安全和稳定。",
+                "prompt": "",
+                "canAssignTo": [
+                    
+                ]
+            },
+            {
+                "role": "xingbu",
+                "name": "刑部",
+                "level": 4,
+                "description": "负责国家的司法管理和法律执行工作，确保国家的法治和公平。",
+                "prompt": "",
+                "canAssignTo": [
+                    
+                ]
+             },
+             {
+                 "role": "gongbu",
+                 "name": "工部",
+                 "level": 4,
+                 "description": "负责国家的工程建设和技术管理工作，确保国家的基础设施和技术水平。",
+                 "prompt": "",
+                 "canAssignTo": [
+                    
+                 ]
+              }
+        ]
+    }
+]
