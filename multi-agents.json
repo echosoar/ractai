@@ -1,9 +1,9 @@
 [
     {
         "groupName": "集团公司",
-        "taskLabel":"任务指示",
+        "taskLabel":"战略任务",
         "structureLabel":"组织架构",
-        "archiveLabel":"档案管理",
+        "archiveLabel":"审计与档案",
         "agents": [
             {
                 "role": "ceo",
@@ -93,6 +93,9 @@
     },
     {
         "groupName": "三省六部",
+        "taskLabel":"旨意",
+        "structureLabel":"中枢机构",
+        "archiveLabel":"史记",
         "agents": [
             {
                 "role": "huangdi",
