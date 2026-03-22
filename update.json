@@ -1,6 +1,6 @@
 {
-  "version": "0.2.45",
-  "releaseDate": "2026-03-17T13:46:58Z",
+  "version": "0.2.46",
+  "releaseDate": "2026-03-22T13:37:41Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增 kreuzberg/RTK 两个插件，支持解析 79 种文件内容及降低 Bash 执行的 Token 消耗；优化样式 "
+  "releaseNotes": "release 会话网关支持 微信 claw；新增多智能体模式；优化无嵌入模型的记忆；优化交互 "
 }
