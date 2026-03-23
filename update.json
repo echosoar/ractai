@@ -1,6 +1,6 @@
 {
-  "version": "0.2.46",
-  "releaseDate": "2026-03-22T13:37:41Z",
+  "version": "0.2.47",
+  "releaseDate": "2026-03-23T01:00:23Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 会话网关支持 微信 claw；新增多智能体模式；优化无嵌入模型的记忆；优化交互 "
+  "releaseNotes": "release 新增多Agent模式；优化微信Claw的数据统计；命令执行可以自定义高危操作命令 "
 }
