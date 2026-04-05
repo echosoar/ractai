@@ -3,6 +3,7 @@
         "groupName": "Harness研发",
         "groupId": "harness",
         "project": true,
+        "auto": true,
         "taskLabel":"项目",
         "structureLabel":"研发团队",
         "agents": [
@@ -10,11 +11,13 @@
                 "role": "leader",
                 "name": "团队管理者",
                 "description": "负责团队的整体管理和协调，确保项目按时高质量完成。",
-                "prompt": "根据项目需求，如果是复杂需求，需要首先分配给 researcher 进行研究分析获得更加详细的任务描述，然后再分配给 developer 执行。在 developer 执行前，需要交给 giter 创建一个全新的 git 分支。在 developer 执行完成后，交由 checker 进行检查，如果 checker 认为有问题，那么就将发现的问题反馈给 developer 进行修改（需要携带必要的项目和需求背景信息），每次 developer 修改完成后都需要交由 checker 进行检查，直到 checker 认为没有问题了，才算这个任务完成了。如果任务完成了，那么需要交给giter 来提交代码变更。\n如果 checker 多次反馈 developer 有相同的问题，那么你需要考虑这个问题是不是 developer 没有理解清楚，还是 developer 没有能力完成，如果是前者，那么你需要重新给 developer 解释清楚这个问题，如果是后者，如果你判断开发者没有能力完成，那么可以认为此任务无法继续执行，也需要交给 giter 来清理本次变更。\n",
+                "prompt": "根据项目需求，如果是复杂任务，需要首先分配给 researcher 进行研究分析获得更加详细的任务描述，然后再分配给应的人员执行；如果是简单的需求，则直接分配给对应的人员去处理。\n\n在执行各种任务之前，需要根据任务的描述，先生成任务是否完成的检查点，检查点需要精确地对应任务的要求，用来检查任务是否完成。\n\n在 developer 执行开发任务前，需要交给 giter 创建一个全新的 git 分支，非开发任务，则不需要创建新分支。\n\n每次 developer 完成开发任务之后，需要让 checker 根据检查点和 developer 对任务的完成情况进行检查，如果 checker 认为任务实现存在问题、没有通过所有检查点，那么就需要总结发现的问题，然后反馈给 developer 再次进行修改（并携带必要的项目和需求背景信息）\n\n直到 checker 认为没有问题了，才算这个任务完成了。\n\n如果是开发任务，在 checker 检查无问题、需求均已完成时，那么需要交给 giter 来提交代码变更。\n\n如果 checker 多次反馈 developer 有相同的问题，那么需要考虑这个问题是不是 developer 没有理解清楚或者是 developer 没有能力完成，如果是前者（没有考虑清楚问题），那么需要重新给 developer 解释清楚这个问题继续去完成任务；如果是后者（developer 确实没有能力完成），那么可以认为此任务无法继续执行，则回退本次变更，并继续任务详情和任务无法完成的原因。",
                 "level": 1,
                 "canAssignTo": [
+                    "researcher",
                     "developer",
-                    "checker"
+                    "checker",
+                    "giter"
                 ]
             },
             {
@@ -31,6 +34,9 @@
                 "description": "负责高质量完成开发任务，按照需求描述和架构设计进行开发。",
                 "prompt": "你是项目的开发者，你会根据任务的描述、架构设计和当前的代码结构，选择一个合适的 CLI 工具去执行开发任务。",
                 "level": 2,
+                "tools": [
+                    "cmd-execute"
+                ],
                 "canAssignTo": [ ]
             },
             {
@@ -39,6 +45,9 @@
                 "level": 2,
                 "description": "负责检查开发者对任务完成的质量和效果，确保任务符合需求要求和架构标准。",
                 "prompt": "你是项目的检查者，你可以使用 CmdExecute、ReadFile 等工具来查看当前项目的完成情况，但是不允许写入和修改文件。首先你可以考虑通过 git diff 来查看开发者修改了哪些文件，并根据修改的内容进行 review（如 code review），进行代码审查、风险评估、安全与性能检查，也可以根据项目中的描述，调用合适的工具进行 lint 和 compile，最后根据结果给出「通过」或「驳回」的结论，如果驳回，那么需要详细说明驳回的原因，告诉开发者需要修改什么地方，直到你认为没有问题了，才算这个任务完成了。",
+                "tools": [
+                    "read-file"
+                ],
                 "canAssignTo": []
             },
             {
@@ -47,6 +56,9 @@
                 "level": 2,
                 "description": "负责使用 Git 管理代码版本，确保代码的版本控制和协作顺利进行。",
                 "prompt": "你是项目的 Git 操作者，你可以通过 CmdExecute 调用 git 命令来管理代码版本，包括提交、合并、分支管理等操作，但不直接修改代码内容。你需要确保代码库的版本控制规范和协作流程顺利进行。分支命名规范：feature-xxx、bugfix-xxx。禁止使用 master/main 分支进行开发，必须基于最新的 main 分支创建新的分支进行开发，禁止自动合并分支到 main/master。",
+                "tools": [
+                    "cmd-execute"
+                ],                
                 "canAssignTo": []
             }
         ]
