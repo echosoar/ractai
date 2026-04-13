@@ -1,6 +1,6 @@
 {
-  "version": "0.2.51",
-  "releaseDate": "2026-04-12T09:12:42Z",
+  "version": "0.2.52",
+  "releaseDate": "2026-04-13T00:50:17Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增知识库功能，可以直接添加链接（也可以直接添加文本），由内置的 WebContent 工具来获取页面的 markdown 内容，并调用 AI 进行总结，也可以把与 AI 的聊天信息保存到知识库;统计功能重构，如缓存的 Token 统计;优化 agent.md 与 memory.md 注入逻辑;增强网页内容提取策略，优化app渲染性能 "
+  "releaseNotes": "release 优化多Agent（Harness）模式；优化知识库 "
 }
