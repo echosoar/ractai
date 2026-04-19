@@ -1,6 +1,6 @@
 {
-  "version": "0.2.49",
-  "releaseDate": "2026-03-28T13:08:23Z",
+  "version": "0.2.52",
+  "releaseDate": "2026-04-13T00:50:17Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增会话网关分组，多个微信 claw 会话可以在分组内共享；新增 CLI 配置管理；优化上下文压缩逻辑；Skills 加载优化并新增 @skill 直接使用某个技能；优化启动性能和抖动 "
+  "releaseNotes": "release 优化多Agent（Harness）模式；优化知识库 "
 }
