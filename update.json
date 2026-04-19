@@ -1,6 +1,6 @@
 {
-  "version": "0.2.52",
-  "releaseDate": "2026-04-13T00:50:17Z",
+  "version": "0.2.53",
+  "releaseDate": "2026-04-19T11:25:00Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化多Agent（Harness）模式；优化知识库 "
+  "releaseNotes": "release 新增自动模型选择；修复 TTS 服务中若干问题；大幅扩展和重组知识页面内容与展示逻辑，改善知识检索和展示体验；优化了应用启动流程与状态结构；修复会话网关与群聊服务相关问题，提升会话稳定性；修复图片粘贴问题；修复技能目录处理的 bug；精简内置工具 "
 }
