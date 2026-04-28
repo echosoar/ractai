@@ -1,6 +1,6 @@
 {
-  "version": "0.2.53",
-  "releaseDate": "2026-04-19T11:25:00Z",
+  "version": "0.2.54",
+  "releaseDate": "2026-04-28T16:13:18Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增自动模型选择；修复 TTS 服务中若干问题；大幅扩展和重组知识页面内容与展示逻辑，改善知识检索和展示体验；优化了应用启动流程与状态结构；修复会话网关与群聊服务相关问题，提升会话稳定性；修复图片粘贴问题；修复技能目录处理的 bug；精简内置工具 "
+  "releaseNotes": "release 新增内置的搜索增强模式，在没有配置任何模型的时候，也可以使用此模式进行对话，会直接调用 WebSearch 工具，合并、过滤多个数据源的结果；知识库基于 @karpathy 的 llm-wiki 进行了一些优化，自动将知识内容提取实体、概念，并自动编入索引；性能和界面优化 "
 }
