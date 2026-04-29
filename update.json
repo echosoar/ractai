@@ -1,6 +1,6 @@
 {
-  "version": "0.2.54",
-  "releaseDate": "2026-04-28T16:13:18Z",
+  "version": "0.2.55",
+  "releaseDate": "2026-04-29T15:57:17Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增内置的搜索增强模式，在没有配置任何模型的时候，也可以使用此模式进行对话，会直接调用 WebSearch 工具，合并、过滤多个数据源的结果；知识库基于 @karpathy 的 llm-wiki 进行了一些优化，自动将知识内容提取实体、概念，并自动编入索引；性能和界面优化 "
+  "releaseNotes": "release 优化 TTS 模型的接入流程；优化常规模型配置时的自动补全 "
 }
