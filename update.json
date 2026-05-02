@@ -1,6 +1,6 @@
 {
-  "version": "0.2.55",
-  "releaseDate": "2026-04-29T15:57:17Z",
+  "version": "0.2.56",
+  "releaseDate": "2026-05-02T14:44:06Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化 TTS 模型的接入流程；优化常规模型配置时的自动补全 "
+  "releaseNotes": "release 新增手绘模式，可以手绘图像发给 ai；模型支持 http 协议 api 地址；优化知识库和MultiAgent模式 "
 }
