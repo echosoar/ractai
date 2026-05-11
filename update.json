@@ -1,6 +1,6 @@
 {
-  "version": "0.2.57",
-  "releaseDate": "2026-05-06T01:23:04Z",
+  "version": "0.2.58",
+  "releaseDate": "2026-05-11T01:22:00Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增AskQuestions 工具；优化 MultiAgent，支持 worktree；优化定时动作 "
+  "releaseNotes": "release 新增多种内置搜索引擎，可以多引擎并行搜索，无需配置，即开即用；新增通过 Jina、Defuddle 获取网页内容的开关 "
 }
