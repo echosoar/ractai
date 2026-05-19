@@ -1,6 +1,6 @@
 {
-  "version": "0.2.58",
-  "releaseDate": "2026-05-11T01:22:00Z",
+  "version": "0.2.59",
+  "releaseDate": "2026-05-19T00:42:12Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增多种内置搜索引擎，可以多引擎并行搜索，无需配置，即开即用；新增通过 Jina、Defuddle 获取网页内容的开关 "
+  "releaseNotes": "release 优化 reasoning_content 的回传；新增历史消息折叠，提升渲染性能；优化 anthropic 格式模型网关 "
 }
