@@ -1,6 +1,6 @@
 {
-  "version": "0.2.59",
-  "releaseDate": "2026-05-19T00:42:12Z",
+  "version": "0.2.60",
+  "releaseDate": "2026-06-01T01:12:20Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化 reasoning_content 的回传；新增历史消息折叠，提升渲染性能；优化 anthropic 格式模型网关 "
+  "releaseNotes": "release 新增 johnny.decimal 类型知识库；优化自动模型选择；优化性能 "
 }
