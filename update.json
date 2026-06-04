@@ -1,6 +1,6 @@
 {
-  "version": "0.2.60",
-  "releaseDate": "2026-06-01T01:12:20Z",
+  "version": "0.2.61",
+  "releaseDate": "2026-06-04T01:09:12Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增 johnny.decimal 类型知识库；优化自动模型选择；优化性能 "
+  "releaseNotes": "release 新增自动模型，可根据任务的复杂程度自动选择合适的模型来完成任务;新增 Johnny.Decimal 类型知识库，并优化和知识库对话的逻辑 "
 }
