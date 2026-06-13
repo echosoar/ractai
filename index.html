@@ -15,23 +15,20 @@
 
         html {
             scroll-behavior: smooth;
+            background: rgb(250, 247, 242);
         }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #ffffff;
         }
 
         /* Header */
         header {
-            position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             padding: 20px 0;
         }
@@ -62,11 +59,11 @@
         }
 
         nav a {
-            color: #4a4a4a;
+            color: #6b7280;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-            font-size: 1rem;
+            font-size: 14px;
         }
 
         nav a:hover {
@@ -74,23 +71,23 @@
         }
 
         .lang-toggle {
-            padding: 8px 16px;
-            background: #f5f5f5;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            color: #6b7280;
+            text-decoration: none;
             font-weight: 500;
-            color: #333;
+            transition: color 0.3s ease;
+            font-size: 14px;
+            border: none;
+            background: none;
+            cursor: pointer;
         }
 
         .lang-toggle:hover {
-            background: #e8e8e8;
+            color: #1a1a1a;
         }
 
         /* Hero Section */
         .hero {
-            padding: 140px 40px 80px;
+            padding: 100px 40px 80px;
             max-width: 1200px;
             margin: 0 auto;
             display: block;
@@ -98,11 +95,11 @@
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 42px;
             font-weight: 800;
             color: #1a1a1a;
             margin-bottom: 20px;
-            line-height: 1.2;
+            line-height: 2;
             text-align: center;
         }
 
@@ -114,8 +111,8 @@
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            color: #666;
+            font-size: 15px;
+            color: #6b7280;
             margin-bottom: 30px;
             line-height: 1.8;
             text-align: center;
@@ -190,11 +187,11 @@
         .btn-secondary {
             background: #ffffff;
             color: #1a1a1a;
-            border: 2px solid #e0e0e0;
+            box-shadow: 0 0 3px #e6e6e6;
         }
 
         .btn-secondary:hover {
-            border-color: #999;
+            box-shadow: 0 0 3px #818181;
             background: #f5f5f5;
         }
 
@@ -295,7 +292,9 @@
         }
 
         .feature-item:nth-child(2n +1) {
-            background-color: #f0f8ff;
+            background: #9e887a url('./hstatic/itembg.jpg') center/cover no-repeat;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
         }
 
         .feature-item:nth-child(odd) .feature-content {
@@ -347,6 +346,7 @@
 
         footer a {
             color: #333;
+            text-decoration: none;
         }
 
         footer p {
@@ -469,7 +469,7 @@
             <div class="hero-buttons">
                 <a href="https://ractai.com/dist/ract-latest.dmg" class="btn btn-primary" id="mainDownloadBtn" target="_blank">
                     <span class="lang-en">Free Download </span>
-                    <span class="lang-zh">免费下载使用 ( Mac 版 )</span>
+                    <span class="lang-zh">完全免费使用，下载 Mac 版</span>
                 </a>
                 <a href="https://github.com/echosoar/ractai/issues" class="btn btn-secondary" target="_blank">
                     <span class="lang-en">Issue Feedback</span>
@@ -479,7 +479,7 @@
             <div class="download-info">
                 <span class="version-info" id="versionInfo" style="display: none;"></span>
             </div>
-            <div class="more-desc">使用 Swift 开发，极小内存占用和极小包体积（7 MB）</div>
+            <div class="more-desc"></div>
         </div>
         <div class="hero-visual">
             <img class="main-img" src="./hstatic/header3.png" />
@@ -493,8 +493,8 @@
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">1. SubAgent</span>
-                    <span class="lang-zh">一、SubAgent 与智能体</span>
+                    <span class="lang-en">SubAgent</span>
+                    <span class="lang-zh">SubAgent 与智能体</span>
                 </h3>
                 <p>
                     <span class="lang-en"></span>
@@ -509,12 +509,12 @@
          <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">2. Conversation Gateway</span>
-                    <span class="lang-zh">二、会话网关</span>
+                    <span class="lang-en">Conversation Gateway</span>
+                    <span class="lang-zh">会话网关</span>
                 </h3>
                 <p>
                     <span class="lang-en">The Session Gateway provides the ability to expose Ract's AI capabilities to other applications, similar to OpenClaw. It can integrate Ract into third-party applications such as Lark, allowing you to remotely control Ract on other devices to complete tasks via IM software.</span>
-                    <span class="lang-zh">会话网关提供了将 Ract 的 AI 能力暴露给其他应用的能力，类似于 OpenClaw，可以在飞书、微信等第三方应用中集成 Ract，让你可以远程通过 IM 软件控制其他设备上的 Ract 完成任务。</span>
+                    <span class="lang-zh">将 Ract 的 AI 能力暴露给其他应用，类似于 OpenClaw，可在飞书、微信等第三方应用中集成 Ract，支持远程通过 IM 软件控制其他设备上的 Ract 完成任务。</span>
                 </p>
             </div>
             <div class="feature-visual">
@@ -526,8 +526,8 @@
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">3. Video and Image Generation</span>
-                    <span class="lang-zh">三、视频和图像生成</span>
+                    <span class="lang-en">Video and Image Generation</span>
+                    <span class="lang-zh">视频和图像生成</span>
                 </h3>
                 <p>
                     <span class="lang-en">Supports video generation models like Seedance and image generation models like NanoBanana 2.</span>
@@ -544,8 +544,8 @@
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">4. Group Chat</span>
-                    <span class="lang-zh">四、群聊</span>
+                    <span class="lang-en">Group Chat</span>
+                    <span class="lang-zh">群聊</span>
                 </h3>
                 <p>
                     <span class="lang-en">
@@ -567,8 +567,8 @@ You can pull multiple AI agents with different roles and identities into a group
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">5. Action Automation</span>
-                    <span class="lang-zh">五、动作自动化</span>
+                    <span class="lang-en">Action Automation</span>
+                    <span class="lang-zh">动作自动化</span>
                 </h3>
                 <p>
                     <span class="lang-en">Save the chat process as reusable actions. Add triggers such as schedules to enable fully automated execution. Turn conversations into powerful workflows.</span>
@@ -587,12 +587,12 @@ You can pull multiple AI agents with different roles and identities into a group
          <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">6. Memory System</span>
-                    <span class="lang-zh">六、记忆系统</span>
+                    <span class="lang-en">Memory System</span>
+                    <span class="lang-zh">记忆系统</span>
                 </h3>
                 <p>
                     <span class="lang-en">During conversations, Ract automatically selects and retrieves global memories and items from your memory bank, associating the most relevant memories with your questions so the AI becomes a personal assistant that understands you.</span>
-                    <span class="lang-zh">在对话过程中 Ract 会自动选择和检索全局记忆和记忆库，为你的问题关联最匹配的记忆，让 AI 成为懂你的私人助手。</span>
+                    <span class="lang-zh">在对话过程中 Ract 会自动选择、检索记忆库，为问题关联最匹配的记忆，让 AI 成为懂你的私人助手。</span>
                 </p>
             </div>
             <div class="feature-visual">
@@ -604,8 +604,8 @@ You can pull multiple AI agents with different roles and identities into a group
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">7. Skills</span>
-                    <span class="lang-zh">七、技能</span>
+                    <span class="lang-en">Skills</span>
+                    <span class="lang-zh">技能</span>
                 </h3>
                 <p>
                     <span class="lang-en">Support one-click installation of various Skills to extend Ract's functionality.</span>
@@ -622,8 +622,8 @@ You can pull multiple AI agents with different roles and identities into a group
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">8. MCP Support</span>
-                    <span class="lang-zh">八、MCP 支持</span>
+                    <span class="lang-en">MCP Support</span>
+                    <span class="lang-zh">MCP 支持</span>
                 </h3>
                 <p>
                     <span class="lang-en">Supports MCP protocol, integrating various tools and services to enhance automation capabilities and productivity.</span>
@@ -635,31 +635,17 @@ You can pull multiple AI agents with different roles and identities into a group
             </div>
         </div>
 
-         <div class="feature-item">
-            <div class="feature-content">
-                <h3>
-                    <span class="lang-en">9. Multi-Model Support</span>
-                    <span class="lang-zh">九、多模型提供商</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Connect to multiple AI model providers. Seamlessly add and switch between models for multi-turn conversations. Choose the best-suited model for each task to get the optimal response.</span>
-                    <span class="lang-zh">支持连接多种 AI 模型提供商。无缝添加和切换不同模型进行多轮对话。为每个任务选择最合适的模型，获得最佳响应。</span>
-                </p>
-            </div>
-            <div class="feature-visual">
-                <img src="./hstatic/model.png" />
-            </div>
-        </div>
+         
 
          <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">10. Built-in Tools</span>
-                    <span class="lang-zh">十、内置工具集</span>
+                    <span class="lang-en">Built-in Tools</span>
+                    <span class="lang-zh">内置工具集</span>
                 </h3>
                 <p>
                     <span class="lang-en">A rich toolkit including web search, webpage reading, system notifications, file read/write, and file retrieval — everything needed for productivity, built in.</span>
-                    <span class="lang-zh">丰富的工具集，包括网络搜索、网页内容读取、系统通知提示、文件读写、文件检索等。提高生产力所需的一切，全部内置。</span>
+                    <span class="lang-zh">丰富的工具集，包括网络搜索、网页内容读取、系统通知提示、文件读写、文件检索等。<br />提高生产力所需的一切，全部内置。</span>
                 </p>
             </div>
             <div class="feature-visual">
@@ -670,8 +656,8 @@ You can pull multiple AI agents with different roles and identities into a group
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">11. TTS</span>
-                    <span class="lang-zh">十一、TTS</span>
+                    <span class="lang-en">TTS</span>
+                    <span class="lang-zh">TTS 语音合成</span>
                 </h3>
                 <p>
                     <span class="lang-en">Convert AI-generated text into speech for playback, supporting multiple voices and language options.<br /></span>
@@ -685,30 +671,11 @@ You can pull multiple AI agents with different roles and identities into a group
             </div>
         </div>
 
-
-         <div class="feature-item">
-            <div class="feature-content">
-                <h3>
-                    <span class="lang-en">12. Multi-model, multimodal</span>
-                    <span class="lang-zh">十二、多模型、多模态</span>
-                </h3>
-                <p>
-                    <span class="lang-en">Switch between different models within a single conversation, with multimodal inputs including text, images, and files.</span>
-                    <span class="lang-zh">在一次对话中任意切换不同的模型，提供文字、图像、文件等类型的多模态输入能力。</span>
-                </p>
-            </div>
-            <div class="feature-visual">
-                <img src="./hstatic/img.jpg" />
-            </div>
-        </div>
-       
-
-
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">13. Website Integration</span>
-                    <span class="lang-zh">十三、网站连接</span>
+                    <span class="lang-en">Website Integration</span>
+                    <span class="lang-zh">网站连接</span>
                 </h3>
                 <p>
                     <span class="lang-en">Connect to multiple websites and stay logged in. Browse pages and summarize social media updates under your authenticated identity.<br />Your login information is stored locally to ensure privacy and security.</span>
@@ -722,13 +689,12 @@ You can pull multiple AI agents with different roles and identities into a group
                 <img src="./hstatic/conn.png" />
             </div>
         </div>
-       
 
         <div class="feature-item">
             <div class="feature-content">
                 <h3>
-                    <span class="lang-en">14. Usage Analytics</span>
-                    <span class="lang-zh">十四、统计分析</span>
+                    <span class="lang-en">Usage Analytics</span>
+                    <span class="lang-zh">统计分析</span>
                 </h3>
                 <p>
                     <span class="lang-en">View comprehensive statistics by day, week, month, and year. Track model consumption, conversation rounds, and tool calls to understand your AI interaction patterns.</span>
@@ -743,8 +709,8 @@ You can pull multiple AI agents with different roles and identities into a group
 
     <!-- Footer -->
     <footer>
-        <p>&copy; <span id="year"></span> Ract. <span class="lang-en">Powered with love by <a href="https://github.com/echosoar">echosoar</a></span><span class="lang-zh">由 <a href="https://github.com/echosoar">echosoar</a> 用爱发电</span></p>
-        <p>其他作品：<a href="https://toolight.cn" target="_blank">偷懒工具</a>、<a href="https://echosoar.github.io/weekly/"  target="_blank">偷懒爱好者周刊</a>、<a href="https://aiznb.com"  target="_blank">AI 真牛逼</a>、<a href="https://1htr.cn"  target="_blank">百万排行榜</a></p>
+        <p>&copy; <span id="year"></span> Ract. <span class="lang-en">Powered with love by <a href="https://github.com/echosoar">codersoar</a></span><span class="lang-zh">由 <a href="https://github.com/echosoar">codersoar</a> 用爱发电</span></p>
+        <p><a href="https://toolight.cn" target="_blank">偷懒工具</a>、<a href="https://echosoar.github.io/weekly/"  target="_blank">偷懒爱好者周刊</a>、<a href="https://aiznb.com"  target="_blank">AI 真牛逼</a>、<a href="https://1htr.cn"  target="_blank">百万排行榜</a></p>
     </footer>
 
     <script>
