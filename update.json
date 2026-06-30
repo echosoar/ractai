@@ -1,6 +1,6 @@
 {
-  "version": "0.2.63",
-  "releaseDate": "2026-06-25T00:10:13Z",
+  "version": "0.2.64",
+  "releaseDate": "2026-06-30T05:48:59Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 模型类型新增 CMD 类别;性能优化;Markdown 表格的表头和单元格支持文本选择与复制;修复消息 ID、subagent 等bug "
+  "releaseNotes": "release 支持 Computer-Use;绘图工具增强;自动模型路由的升级机制优化;多步骤任务;模型 reasoning_effort;流式输出优化和设置页面的主题优化 "
 }
