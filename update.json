@@ -1,6 +1,6 @@
 {
-  "version": "0.2.65",
-  "releaseDate": "2026-07-25T23:47:47Z",
+  "version": "0.2.66",
+  "releaseDate": "2026-07-31T01:11:03Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化数据 SwiftData 持久化；新增资源管理器和变更面板；聊天界面优化，新增顶部状态栏；重构设置卡片；修复WebConnection 的 use-after-free 崩溃；修复滚动相关问题；修复文件预览问题 "
+  "releaseNotes": "release 支持 stream-json 与CLI交互；添加模型支持一键拉取模型列表；新增固定温度设置；非多模态模型图像增强；左侧边栏支持收起展开 "
 }
