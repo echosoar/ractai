@@ -1,6 +1,6 @@
 {
-  "version": "0.2.66",
-  "releaseDate": "2026-07-31T01:11:03Z",
+  "version": "0.2.67",
+  "releaseDate": "2026-08-07T01:21:15Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 支持 stream-json 与CLI交互；添加模型支持一键拉取模型列表；新增固定温度设置；非多模态模型图像增强；左侧边栏支持收起展开 "
+  "releaseNotes": "release 优化 ComputerUse 功能，支持实时预览窗口;优化 BrowserUse 的会话结束自动关闭;界面优化 "
 }
