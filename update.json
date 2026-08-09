@@ -1,6 +1,6 @@
 {
-  "version": "0.2.67",
-  "releaseDate": "2026-08-07T01:21:15Z",
+  "version": "0.2.68",
+  "releaseDate": "2026-08-09T13:53:01Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 优化 ComputerUse 功能，支持实时预览窗口;优化 BrowserUse 的会话结束自动关闭;界面优化 "
+  "releaseNotes": "release 研发模式新增 checker、自动重试；修复并发 ask_questions 的问题冲突；优化 Worktree 的 Diff 查看；修复批准命令时偶发 tool-call ID 丢失问题；优化多智能体日志、任务状态和界面显示 "
 }
