@@ -1,6 +1,6 @@
 {
-  "version": "0.2.68",
-  "releaseDate": "2026-08-09T13:53:01Z",
+  "version": "0.2.69",
+  "releaseDate": "2026-08-19T23:53:42Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 研发模式新增 checker、自动重试；修复并发 ask_questions 的问题冲突；优化 Worktree 的 Diff 查看；修复批准命令时偶发 tool-call ID 丢失问题；优化多智能体日志、任务状态和界面显示 "
+  "releaseNotes": "release 新增 Responses API 协议适配；stream-json 工具审批；研发模式 Checker 支持配置单独的模型和重试次数；修复 CMD 模型传递 system prompt 问题；样式修复与细节优化 "
 }
