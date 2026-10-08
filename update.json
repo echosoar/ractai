@@ -1,6 +1,6 @@
 {
-  "version": "0.2.71",
-  "releaseDate": "2026-09-14T12:07:05Z",
+  "version": "0.2.72",
+  "releaseDate": "2026-10-08T23:17:32Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 修复短周期命令执行时自动切换到后台执行的问题;修复厂商一键授权时模型详情弹窗弹出失败的问题 "
+  "releaseNotes": "release 优化高性能渲染模式的权限审批和深度思考内容展示；新增技能单文件扫描和全局开关 "
 }
