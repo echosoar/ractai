@@ -1,6 +1,6 @@
 {
-  "version": "0.2.73",
-  "releaseDate": "2026-10-18T03:10:20Z",
+  "version": "0.2.74",
+  "releaseDate": "2026-10-24T08:53:00Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 新增决策模型配置;新增模型调用日志记录 "
+  "releaseNotes": "release 群聊支持决策模型；高性能模式支持更多操作 "
 }
