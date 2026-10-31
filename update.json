@@ -1,6 +1,6 @@
 {
-  "version": "0.2.74",
-  "releaseDate": "2026-10-24T08:53:00Z",
+  "version": "0.2.75",
+  "releaseDate": "2026-10-31T09:21:29Z",
   "downloads": {
     "universal": {
       "url": "https://ractai.com/dist/ract-latest.dmg",
@@ -15,5 +15,5 @@
       "filename": "ract-latest.dmg"
     }
   },
-  "releaseNotes": "release 群聊支持决策模型；高性能模式支持更多操作 "
+  "releaseNotes": "release 新增DeepSeek 搜索支持；优化知识库问答 "
 }
